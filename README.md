@@ -1,6 +1,6 @@
 # Weather Web App
 
-![Design preview for the Weather Web App](./assets/design/desktop%20design.png)
+![Design preview for the Weather Web App](public/assets/design/desktop%20design.png)
 
 ## Welcome! 👋
 

@@ -43,8 +43,8 @@ function setDetails(data) {
   cityName.textContent = data.resolvedAddress
   temperature.textContent = `${data.days[0].temp} ℃`
   dateTime.textContent = new Date(data.days[0].datetime).toDateString()
-  minTemp.textContent = `Min : ${data.days[0].tempmin} ℃`
-  maxTemp.textContent = `Max : ${data.days[0].tempmax} ℃`
+  minTemp.textContent = `Min : ${data.days[0].tempmax} ℃`
+  maxTemp.textContent = `Max : ${data.days[0].tempmin} ℃`
   description.textContent = data.days[0].description
   weatherImg.src = `/assets/images/${iconImg}.jpg`
   weatherImg.alt = data.days[0].conditions

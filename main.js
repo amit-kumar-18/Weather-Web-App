@@ -21,12 +21,13 @@ const nextIcon = document.querySelectorAll('.next-icon')
 const nextTemp = document.querySelectorAll('.next-temp')
 const notification = document.querySelector('.invalid')
 const deleteNotification = document.querySelector('.delete')
-const API_KEY = import.meta.env.VITE_API_KEY
 
 // Utility functions
 const getWeather = async (city = 'delhi') => {
   try {
-    const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${API_KEY}`
+    const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${
+      import.meta.env.VITE_API_KEY
+    }`
     const response = await axios.get(URL)
     const data = response.data
     setDetails(data)

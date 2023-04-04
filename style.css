@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url(/assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content h1,
+.content p,
+.title,
+.subtitle,
+.card,
+.navbar-item {
+  color: #fff;
+}
+
+.card {
+  background-color: #202020;
+  opacity: 0.9;
+}
+
+.tag {
+  position: absolute;
+  right: 0;
+}
+
+.media-content {
+  overflow: hidden;
+}
+
+.card-content {
+  display: grid;
+}
+
+#search-bar {
+  place-self: center;
+}
+
+.card-content {
+  font-size: 1.2rem;
+}
+
+#weather-icon-container {
+  border-radius: 5px;
+  padding: 0.5rem 0.4rem;
+  background: #dbd8d8;
+  cursor: pointer;
+  transition: background 150ms ease-in-out;
+}
+
+#weather-icon-container:hover {
+  background: #fff;
+}
+
+#min-temp,
+#max-temp {
+  border: 2px solid #dbd8d8;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transition: background 150ms ease-in-out;
+}
+
+#min-temp:hover,
+#max-temp:hover {
+  background: #dbd8d8;
+  color: #202020;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.weather-details .content-container,
+.weather-details .content-container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-details img {
+  width: 40px;
+  height: 40px;
+}
+
+.next7days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  padding-block: 0.5rem;
+}
+
+.next7days div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.next7days img {
+  height: 45px;
+  width: 45px;
+}
+
+.content,
+.next7days {
+  word-break: break-all;
+}
+
+.next-icon {
+  background-color: #dbd8d8;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+}
+
+.invalid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.invalid.active {
+  display: block;
+}
+
+.notification {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+/* Space between two card on smaller screen */
+
+@media (max-width: 768px) {
+  section {
+    display: grid;
+    gap: 1rem;
+  }
+}

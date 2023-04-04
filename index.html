@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- Bulma CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="/main.js" charset="UTF-8" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="section columns is-centered is-2 is-relative">
+        <!-- Card 1 -->
+        <div class="card is-half column is-one-third">
+          <div class="card-image">
+            <figure class="image">
+              <span class="tag is-danger" id="weather-conditon"></span>
+              <img src="./assets/images/clear-day.jpg" alt="Placeholder image" id="weather-img" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48" id="weather-icon-container">
+                  <img
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="Placeholder image"
+                    id="weather-icon"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <h1 class="title is-size-3"></h1>
+                <h2 class="subtitle is-size-4"></h2>
+              </div>
+            </div>
+
+            <div class="content is-flex is-flex-direction-column">
+              <span id="date-time" class="datetime is-size-4 mb-3"></span>
+              <div class="temp-min-max is-flex is-justify-content-space-between mb-5 is-size-5">
+                <span id="min-temp"> </span>
+                <span id="max-temp"> </span>
+              </div>
+              <p class="description" id="description"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card is-half column is-one-third">
+          <div class="card-content">
+            <div class="media" id="search-bar">
+              <form class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter City" id="search-box" />
+                </div>
+                <div class="control">
+                  <button type="submit" id="search-btn" class="button is-info">Search</button>
+                </div>
+              </form>
+            </div>
+
+            <article class="content weather-details">
+              <div class="content-container">
+                <div>
+                  <img src="./assets/icons/world-time.png" alt="Timezone" />
+                  Timezone
+                </div>
+                <span id="timezone"></span>
+              </div>
+              <div class="content-container">
+                <div>
+                  <img src="./assets/icons/dew-point.png" alt="Dew" />
+                  Dew
+                </div>
+                <span id="dew"></span>
+              </div>
+              <div class="content-container">
+                <div>
+                  <img src="./assets/icons/humidity.png" alt="humidity" />
+                  Humidity
+                </div>
+                <span id="humidity"></span>
+              </div>
+              <div class="content-container">
+                <div>
+                  <img src="./assets/icons/high-temperature.png" alt="feels like" />
+                  Feels like
+                </div>
+                <span id="feels-like"></span>
+              </div>
+            </article>
+            <hr />
+            <article class="next7days">
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+              <div>
+                <span class="next-day"></span>
+                <div>
+                  <img
+                    class="next-icon"
+                    src="./assets/weather-icons/clear-day.svg"
+                    alt="clear-day"
+                  />
+                </div>
+                <span class="next-temp"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Invalid Notification -->
+        <div class="invalid">
+          <div class="notification is-danger">
+            <button class="delete"></button>
+            Invalid location
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
